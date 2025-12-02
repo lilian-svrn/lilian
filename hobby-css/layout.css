@@ -39,11 +39,15 @@
 
 /* ****************************************  */
 
-main{
+#contenu{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+#calculatrice{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    font-size: large;
 }
 
 #ecran{
@@ -72,4 +76,14 @@ main{
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+#exposition a{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a{
+    display: flex;
+    justify-content: space-around;
 }

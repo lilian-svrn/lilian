@@ -1,5 +1,49 @@
 @charset "UTF-8";
 
+
+@media print {
+    @page {
+        margin:0;
+    }
+
+    #tete{
+        display: none !important; 
+    }
+
+    #exposition img{ 
+        width: 60% !important;
+        margin: 0.5em;
+    }
+
+    main #calculatrice {
+        border: solid 2px #1e293b;
+        transform: scale(0.8);
+        margin: -3em auto ;
+    }
+
+    main #calculatrice > *{
+        border: solid 2px #1981ae;
+    }
+
+    main #contenu{
+        display: flex ;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main #exposition{
+        border-top: 1px solid #1e293b;
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+body{
+    background: radial-gradient(circle at top, #0f1b2d, #050812);
+}
+
 #tete{
     border-bottom: 1px solid #1e293b;
 }
@@ -61,24 +105,30 @@
     transition: 1s;
 }
 
+
 /* ****************************************  */
 
+
 #calculatrice{
-    margin: 1rem;
     padding: 1em;
+    margin: 4em auto;
     border: solid 1px #1e293b;
     border-radius: 0.75rem;
     color: aliceblue;
     background: linear-gradient(180deg, #0f1e33, #060b16);
+    font-size: large;
+}
+
+#calculatrice > *{
+    border: solid 1px #1981ae;
+    border-radius: 0.75em;
+    width: 20rem;
+    padding: 1em;
 }
 
 #ecran{
-    padding: 1em;
     margin-bottom: 1em;
-    width: 20rem;
-    height: 10rem;
-    border: solid 1px #1981ae;
-    border-radius: 0.75em;
+    height: 10rem; 
     text-align: center;
     overflow-x: auto;
     background: linear-gradient(180deg, #111f35, #0a1325);
@@ -86,15 +136,11 @@
 
 #touches{
     background: linear-gradient(180deg, #141f33, #0b1424);
-    padding: 1em;
-    width: 20rem;
-    height: 25rem;
-    border: solid 1px #1981ae;
-    border-radius: 1em;
+    height: 25rem;    
     text-align: center;
 }
 
-#touches > div{
+#touches div{
     cursor: pointer;
     padding: 0.5em;
     border: 1px solid white;
@@ -108,16 +154,98 @@
     transform: scale(1.05)
 }
 
-#on-off{
-    border-right: solid 1px white;
-}
-
 .disabled{
     cursor: no-drop !important;
     color: grey;
     transform: none !important;
 }
 
-body{
-    background: radial-gradient(circle at top, #0f1b2d, #050812);
+#exposition{
+    border-left: 1px solid #1e293b;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#exposition img{
+    max-width: 20em;
+    margin: 1.5em;
+    transition: 0.5s;
+}
+
+#exposition img:hover{
+    transform: scale(1.05);
+}
+
+footer{
+    border-top: 1px solid #1e293b;
+}
+
+footer img{
+    margin: 1em;
+    max-width: 3em;
+}
+
+
+/* ********************************************* */
+
+
+@media screen and (width <=1250px){
+    #contenu{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #calculatrice {
+        transform: scale(0.8);
+        margin: 0 auto;
+    }
+
+    #exposition{
+        border-top: 1px solid #1e293b;
+        padding: 4em 1em;
+    }
+
+    #exposition img{ 
+        width: 80%;
+        margin: 1em;
+    }
+}
+
+@media screen and (width <= 1000px){
+    .center-head a{
+        font-size: 1.5em;
+    }
+
+    .separator{
+        height: 1.5em;
+    }
+
+    .headright a{
+        font-size: 1em;
+    }
+
+    .lang-separator{
+        height: 0.75em;
+    }
+
+    #tete button{
+        border: 2px solid #1981ae;
+    }
+}
+
+@media screen and (width <= 500px){
+    .center-head a{
+        font-size: 1.25em;
+    }
+
+    .separator{
+        height: 1.25em;
+    }
+
+    .headright a{
+        font-size: 0.75em;
+    }
 }

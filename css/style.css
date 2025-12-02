@@ -163,6 +163,7 @@ footer ul{
         font-size: 1em;
     }
 }
+
 @media screen and (width <= 1000px){
     main .contenu{
         grid-template-rows: repeat(3, auto);
