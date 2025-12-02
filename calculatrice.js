@@ -1,4 +1,4 @@
-ison=false
+let ison=false
 
 function GetTextContent(){
     return document.getElementById("ecran-content").textContent
@@ -9,17 +9,17 @@ function SetTextContent(txt){
 }
 
 function OnOff(){
-    ison = !ison; const buttons=document.querySelectorAll("#touches div:not(:first-child)");
+    ison = !ison; 
+    const BUTTONS=document.querySelectorAll("#touches div:not(:first-child)");
     if (ison){
-        for (ele of buttons){
+        for (ele of BUTTONS){
             ele.classList.remove("disabled");
         }            
     }
     else{ 
         SetTextContent(''); document.getElementById("resultat").textContent='';
-        for (ele of buttons){
+        for (ele of BUTTONS){
             ele.classList.add("disabled");
-            // ele.classList.remove("touches > div:hover");
         }
     }
 }
