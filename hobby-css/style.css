@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/* ****************** Header ********************  */
+
+#tete{
+    border-bottom: 1px solid #1e293b;
+}
+
+#tete a{
+    color: #1981ae;
+    text-decoration: none;
+}
+
+#tete a:hover{
+    color: #14213d;
+    transition: 0.5s;
+}
+
+.center-head{
+    margin: 0;
+}
+
+.center-head a{
+    font-size: 2em;
+    margin: 0 0.5em;
+}
+
+.separator{
+    margin: auto;
+    height: 2em;
+    border: 2px solid #1981ae;
+    border-radius: 2em;
+}
+
+.headright{
+    margin: 0.5em;
+}
+
+.headright a{
+    font-size: large;
+}
+
+.lang-separator{
+    margin: 0.5em;
+    height: 1em;
+    border: 1px solid #1981ae;
+    border-radius: 2em;
+}
+
+#tete button{
+    margin-top: auto;
+    background-color: #1981ae;
+    border: 4px solid #1981ae;
+    border-radius: 0.5em;
+}
+
+#tete button:hover{
+    cursor: pointer;
+    color: #e5e5e5;
+    background-color: #14213d;
+    border-color: #14213d;
+    box-shadow: 0px 0px 5px 5px rgba(20,33,61,0.4);
+    transition: 1s;
+}
+
+
+/* ****************** Main ********************  */
+
+
+#calculatrice{
+    padding: 1em;
+    margin: 4em auto;
+    border: solid 1px #1e293b;
+    border-radius: 0.75rem;
+    color: aliceblue;
+    background: linear-gradient(180deg, #0f1e33, #060b16);
+    font-size: large;
+}
+
+#calculatrice > *{
+    border: solid 1px #1981ae;
+    border-radius: 0.75em;
+    width: 20rem;
+    padding: 1em;
+}
+
+#ecran{
+    margin-bottom: 1em;
+    height: 10rem; 
+    text-align: center;
+    overflow-x: auto;
+    background: linear-gradient(180deg, #111f35, #0a1325);
+}
+
+#touches{
+    background: linear-gradient(180deg, #141f33, #0b1424);
+    height: 25rem;    
+    text-align: center;
+}
+
+#touches div{
+    cursor: pointer;
+    padding: 0.5em;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    margin: 0.75em;
+    transition: 0.5s;
+    background: #14213d;
+}
+
+#touches > div:hover{
+    transform: scale(1.05)
+}
+
+.disabled{
+    cursor: no-drop !important;
+    color: grey;
+    transform: none !important;
+}
+
+/* ******************** Footer *********************** */
+
+footer{
+    border-top: 1px solid #1e293b;
+}
+
+footer img{
+    margin: 1em;
+    max-width: 3em;
+}
+
+
+/* ******************** Responsive  *********************** */
+
+
+@media screen and (width <=1250px){
+    #contenu{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #calculatrice {
+        transform: scale(0.8);
+        margin: 0 auto;
+    }
+
+    #exposition{
+        border-top: 1px solid #1e293b;
+        padding: 4em 1em;
+    }
+
+    #exposition img{ 
+        width: 80%;
+        margin: 1em;
+    }
+}
+
+@media screen and (width <= 1000px){
+    .center-head a{
+        font-size: 1.5em;
+    }
+
+    .separator{
+        height: 1.5em;
+    }
+
+    .headright a{
+        font-size: 1em;
+    }
+
+    .lang-separator{
+        height: 0.75em;
+    }
+
+    #tete button{
+        border: 2px solid #1981ae;
+    }
+}
+
+@media screen and (width <= 500px){
+    .center-head a{
+        font-size: 1.25em;
+    }
+
+    .separator{
+        height: 1.25em;
+    }
+
+    .headright a{
+        font-size: 0.75em;
+    }
+}

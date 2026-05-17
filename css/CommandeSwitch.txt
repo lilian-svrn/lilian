@@ -1,0 +1,96 @@
+Creation des Vlan :
+
+vlan 1
+name infra
+vlan 9
+name serveur
+vlan 10
+name bureatique
+vlan 11
+name logistique
+vlan 12
+name production
+vlan 13
+name recherche
+
+Activation mode trunk :
+
+interface Et7
+switchport trunk allowed vlan 1,9,10,11,12,13
+switchport mode trunk
+no shutdown
+
+Attribution adresse IP aux Vlan :
+
+interface vlan1
+ip address 192.168.99.1/24
+interface vlan9
+ip address 10.6.9.1/24
+interface vlan10
+ip address 10.6.10.1/24
+interface vlan11
+ip address 10.6.11.1/24
+interface vlan12
+ip address 10.6.12.1/24
+interface vlan13
+ip address 10.6.13.1/24
+
+Ajout de la passerelle par défaut :
+
+ip route 0.0.0.0/0 192.168.99.254
+
+Association des Vlan aux ports :
+
+interface Et1
+switchport mode access
+switchport access vlan 10
+no shutdown
+interface Et2
+switchport mode access
+switchport access vlan 11
+no shutdown
+interface Et3
+switchport mode access
+switchport access vlan 12
+no shutdown
+interface Et4
+switchport mode access
+switchport access vlan 13
+no shutdown
+interface Et6
+switchport mode access
+switchport access vlan 9
+no shutdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
